@@ -15,7 +15,7 @@ class Exhibit(models.Model):
 	def __str__(self):
 		return self.name
 
-class ExhibitNeighbors(models.Model):
+class ExhibitNeighbor(models.Model):
 	fromExhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True)
 	direction = models.CharField(max_length=200)
 	toExhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True, related_name='neighbor_of')
