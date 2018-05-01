@@ -18,12 +18,12 @@ class ExhibitAdmin(admin.ModelAdmin):
 admin.site.register(Exhibit, ExhibitAdmin)
 
 class ExhibitNeighborAdmin(admin.ModelAdmin):
-	list_display = ('fromExhibit', 'direction', 'toExhibit')
+	list_display = ('id', 'fromExhibit', 'direction', 'toExhibit')
 
 admin.site.register(ExhibitNeighbor, ExhibitNeighborAdmin)
 
 class AnimalAdmin(admin.ModelAdmin):
-	list_display = ('id', 'name', 'exhibit')
+	list_display = ('id', 'name', 'exhibit', 'get_absolute_url', 'imageFileName')
 
 
 admin.site.register(Animal, AnimalAdmin)
