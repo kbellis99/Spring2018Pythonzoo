@@ -51,8 +51,9 @@ class Animal(models.Model):
 	imageFileName = models.CharField(max_length=200, help_text="Enter logo file name", null=True)
 	exhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True)
 	soundFileName = models.CharField(max_length=200, help_text="Enter sound file name", null=True)
-	habitatDescription = models.TextField(max_length=1000, help_text="Enter a description of the Habitat", null=True)
-	dietDescription = models.TextField(max_length=1000, help_text="Enter a description of the Diet", null = True)
+	habitatDescription = models.TextField(max_length=1000, help_text="Enter a description of the Habitat of the animal", null=True)
+	dietDescription = models.TextField(max_length=1000, help_text="Enter a description of the Diet of the animal", null=True)
+	behaviorDescription = models.TextField(max_length=1000, help_text="Enter a description of the Behavior of the animal", null=True)
 	
 	def __str__(self):
 		return self.name

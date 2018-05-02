@@ -4,13 +4,15 @@ from .models import Zoo, Exhibit, Animal
 
 # Create your views here.
 
-def index(request):
-	temporaryData = 'Kristen'
+def aboutUs(request):
 	return render(
 		request,
-		'index.html',
-		context = {'temporaryData' : temporaryData},
+		'zoo/aboutUs.html',
+		context = { },
 	)
+
+class ZooListView(generic.ListView):
+	model = Zoo
 
 class zooDetailView(generic.DetailView):
 	model = Zoo
