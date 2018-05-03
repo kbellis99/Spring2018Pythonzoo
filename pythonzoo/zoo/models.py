@@ -48,9 +48,9 @@ class ExhibitNeighbor(models.Model):
 
 class Animal(models.Model):
 	name = models.CharField(max_length=200, help_text="Enter Animal Name")
-	imageFileName = models.CharField(max_length=200, help_text="Enter logo file name", null=True)
+	imageFileName = models.CharField(max_length=200, help_text="Enter logo file name (images/)", null=True)
 	exhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True)
-	soundFileName = models.CharField(max_length=200, help_text="Enter sound file name", null=True)
+	soundFileName = models.CharField(max_length=200, help_text="Enter sound file name", null=True, blank=True)
 	habitatDescription = models.TextField(max_length=1000, help_text="Enter a description of the Habitat of the animal", null=True)
 	dietDescription = models.TextField(max_length=1000, help_text="Enter a description of the Diet of the animal", null=True)
 	behaviorDescription = models.TextField(max_length=1000, help_text="Enter a description of the Behavior of the animal", null=True)
