@@ -4,8 +4,9 @@ from . import views
 
 urlpatterns = [
     path('', views.ZooListView.as_view(), name='zooList'),
-    path('<int:pk>', views.zooDetailView.as_view(), name='zooDetail'),
+    path('<int:pk>', views.ZooDetailView.as_view(), name='zooDetail'),
     path('exhibit/<int:pk>', views.ExhibitDetailView.as_view(), name='exhibitDetail'),
     path('animal/<int:pk>', views.AnimalDetailView.as_view(), name='animalDetail'),
     path('aboutUs', views.aboutUs, name='aboutUs'),
+    path('contactUs', views.contactUs, name='contactUs'),
 ]

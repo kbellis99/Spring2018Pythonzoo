@@ -10,11 +10,18 @@ def aboutUs(request):
 		'zoo/aboutUs.html',
 		context = { },
 	)
+	
+def contactUs(request):
+	return render(
+		request,
+		'zoo/contactUs.html',
+		context = { },
+	)
 
 class ZooListView(generic.ListView):
 	model = Zoo
 
-class zooDetailView(generic.DetailView):
+class ZooDetailView(generic.DetailView):
 	model = Zoo
 
 class ExhibitDetailView(generic.DetailView):

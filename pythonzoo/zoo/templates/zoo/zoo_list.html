@@ -5,8 +5,10 @@
 <h1>Zoo List</h1>
 
 {% for zoo in zoo_list %}
-  <p>{{ zoo.name }}</p>
- {% endfor %}
+<li>
+	<a href="{{ zoo.get_absolute_url }}">{{ zoo.name }}</a>
+</li>
+{% endfor %}
 
 
 
