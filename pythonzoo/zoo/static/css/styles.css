@@ -1,8 +1,17 @@
-.style {
+body {
+	background-image: url('../images/zoobkgrnd.jpg');
+	text-align: center;
+}
+
+.styles {
 	color: black;
 	text-align: center;
 	font-size: 1.3em;
 	padding: 10px;
+}
+
+p {
+	color: rgb(5,234,216);
 }
 
 .staticBar {
@@ -15,9 +24,25 @@
 
 h1 {
 	font-weight: bolder;
-	font-size: 1.5em;
+	font-size: 1.7em;
+	color: rgb(2,137,42);
 }
 
-h3 {
+h3, h2 {
 	font-weight: bolder;
+	font-size: 1.5em;
+	color: rgb(42,2,137);
+}
+
+img {
+	opacity: 0.9;
+	border-radius: 15px;
+}
+
+a {
+	color: rgb(5,234,216);
+}
+
+a:hover {
+	color: rgb(187,4,18);
 }

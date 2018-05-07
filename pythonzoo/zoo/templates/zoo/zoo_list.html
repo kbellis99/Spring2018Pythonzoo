@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<div class='style'>
+<div class='styles'>
 	<h1>Pick a Zoo</h1>
 
 {% for zoo in zoo_list %}
 
 {% load static %}
-<ul style='list-style-type:none'>
-	<li>
-		<img src="{% static zoo.logoFileName %}" style='height:200px; width:200px'>  <a href="{{ zoo.get_absolute_url }}">{{ zoo.name }}</a>
-	</li>
-</ul>
+	<ul style='list-style-type:none'>
+		<li>
+			<img src="{% static zoo.logoFileName %}" style='height:200px; width:200px'>  <a href="{{ zoo.get_absolute_url }}">{{ zoo.name }}</a>
+		</li>
+	</ul>
 {% endfor %}
 </div>
 

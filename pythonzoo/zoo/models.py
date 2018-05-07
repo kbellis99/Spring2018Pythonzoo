@@ -53,7 +53,7 @@ class Animal(models.Model):
 	livingPeriod = models.CharField(max_length=200, help_text="Enter the period of time they lived", null=True, blank=True)
 	habitatDescription = models.TextField(max_length=1000, help_text="Enter a description of the Habitat of the animal", null=True)
 	dietDescription = models.TextField(max_length=1000, help_text="Enter a description of the Diet of the animal", null=True)
-	behaviorDescription = models.TextField(max_length=1000, help_text="Enter a description of the Behavior of the animal", null=True, blank=True)
+	behaviorDescription = models.CharField(max_length=200, help_text="Enter a description of the Behavior of the animal", null=True, blank=True)
 	
 	def __str__(self):
 		return self.name
