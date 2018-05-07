@@ -17,13 +17,13 @@
 
 <body>
 	
-	<div class='staticBar'>
+<div class='staticBar'>
 	<ul style='list-style-type:none'>
-		<li><a href="{% url 'zooList' %}">Home</a></li>
-		<li><a href="{% url 'aboutUs' %}">About Us</a></li>
-		<li><a href="{% url 'contactUs' %}">Contact Us</a></li>
+		<li class='inline'><a href="{% url 'zooList' %}">Home</a></li>
+		<li class='inline'><a href="{% url 'aboutUs' %}">About Us</a></li>
+		<li class='inline'><a href="{% url 'contactUs' %}">Contact Us</a></li>
 	</ul>
-	</div>
+</div>
 	<hr>
 	
 		{% block content %}{% endblock %}

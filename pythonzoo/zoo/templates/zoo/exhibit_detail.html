@@ -1,18 +1,26 @@
 {% extends "base-generic.html" %}
 
 {% block content %}
+<div class='style'>
+	<h1>Exhibit Detail for {{ exhibit.id }} - {{ exhibit.name }} in {{ exhibit.zoo.name }}</h1>
 
-<h1>Exhibit Detail for {{ exhibit.id }} - {{ exhibit.name }} in {{ exhibit.zoo.name }}</h1>
-
-<h1>Neighbors</h1>
+	<h1>Neighbors</h1>
 {% for neighbor in exhibit.fromExhibit.all %}
-  <p>{{ neighbor.direction }} to: {{ neighbor.toExhibit.name }}</p>
+	<ul style='list-style-type:none'>
+		<li>{{ neighbor.direction }} to: <a href="{{ neighbor.toExhibit.get_absolute_url }}">{{ neighbor.toExhibit.name }}</a></li>
+	</ul>
 {% endfor %}
 
-<h1>Animals</h1>
+	<h1>Animals</h1>
 
 {% for animal in exhibit.animal_set.all %}
-  <p>{{ animal.name }}</p>
+{% load static %}
+	  <img src="{% static animal.imageFileName %}" style='height:150px'>
+	  <a href="{{ animal.get_absolute_url }}">{{ animal.name }}</a>
+	  <br>
+	  <br>
 {% endfor %}
+</div>
+
 
 {% endblock %}
