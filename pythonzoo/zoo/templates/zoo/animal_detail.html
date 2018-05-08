@@ -14,12 +14,15 @@
 
 	<h3>Diet:</h3>
 	<p>{{ animal.dietDescription }}</p>
-
+{% if animal.behaviorDescription != blank %}
 	<h3>Behavior:</h3>
 	<p>{{ animal.behaviorDescription }}</p>
+{% endif %}
 	
+{% if animal.livingPeriod != blank %}	
 	<h3>Living Period:</h3>
 	<p>{{ animal.livingPeriod }}</p>
+{% endif %}
 
 {% endblock %}
 </div>
